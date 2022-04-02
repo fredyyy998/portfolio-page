@@ -1,21 +1,20 @@
-import React from 'react';
 import './App.scss';
+import { Navigation } from './navigation/Navigation';
 
 function App() {
-  return (
-    <div>
 
-      <section>
-        <h1>Section 1</h1>
-      </section>
-      <section style={{backgroundColor: 'black'}}>
-        <h1>Section 2</h1>
-      </section>
-      <section>
-        <h1>Section 3</h1>
-      </section>
-    </div>
-  );
+    return (
+      <div>
+          <Navigation/>
+          <section id={"section1"}>
+              <h1>Section 1</h1>
+          </section>
+          <section id={"section2"} style={{backgroundColor: 'grey'}}><h1>Section 2</h1>
+          </section>
+          <section id={"section3"}><h1>Section 3</h1>
+          </section>
+      </div>
+    );
 }
 
 export default App;

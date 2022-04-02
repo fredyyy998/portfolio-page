@@ -1,3 +1,5 @@
+@use "colors";
+
 html, body {
   margin: 0;
   height:100%;
@@ -6,7 +8,7 @@ html, body {
 }
 section {
   display: block;
-  background: #CFF;
+  background: colors.$secondary;
   height:100vh;
   width:100vw;
   padding: 60px;
