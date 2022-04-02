@@ -1,0 +1,18 @@
+@use "../colors";
+
+footer {
+  padding: 5em;
+  background: colors.$primary;
+  color: colors.$secondary;
+}
+
+.splitter {
+  height: 1px;
+  width: 100%;
+  background: colors.$secondary;
+  opacity: .7;
+}
+
+.section {
+  padding: 1em 0;
+}

@@ -1,5 +1,6 @@
 import './App.scss';
 import { Navigation } from './navigation/Navigation';
+import { Footer } from './footer/Footer';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
           </section>
           <section id={"section3"}><h1>Section 3</h1>
           </section>
+          <Footer />
       </div>
     );
 }
