@@ -1,0 +1,31 @@
+@use '../colors';
+@use '../vars';
+
+.top-navigation {
+  height: 3em;
+  width: 100vw;
+  padding: 0 vars.$side-padding;
+  position: fixed;
+  @include vars.border-box();
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  background-color: colors.$secondary;
+  box-shadow: 0 0 2px colors.$primary;
+
+  a:last-child {
+    margin: 0 0 0 1.5em;
+  }
+  a {
+    margin: 0 1.5em;
+
+    text-decoration: none;
+    color: colors.$primary;
+  }
+
+  .selected {
+    border-bottom: colors.$primary solid 2px;
+  }
+}

@@ -1,17 +1,19 @@
 @use "colors";
+@use "vars";
 
 html, body {
   margin: 0;
   height:100%;
   width:100%;
   padding:0;
+
+  color: colors.$primary;
 }
 section {
   display: block;
   background: colors.$secondary;
   height:100vh;
   width:100vw;
-  padding: 60px;
-  padding-left: 120px;
+  padding: 60px vars.$side-padding;
   box-sizing:border-box;
 }

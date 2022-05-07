@@ -1,9 +1,10 @@
 @use '../colors';
+@use '../vars';
 
 nav {
   position: fixed;
   top: 60%;
-  right: 5em;
+  right: vars.$side-padding;
 }
 
 ul {
