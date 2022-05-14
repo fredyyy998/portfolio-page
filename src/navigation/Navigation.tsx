@@ -3,15 +3,19 @@ import './Navigation.scss';
 import { useLocation } from 'react-router';
 import { NavItem } from './NavItem';
 
-export function Navigation() {
-    const { hash } = useLocation();
+type NavigationProps = {
+  onSectionClick: (index: number) => void;
+  activeIndex: number;
+}
+
+export function Navigation(props: NavigationProps) {
 
     return (
         <nav>
             <ul>
-                <NavItem displayed={'#section1' === hash} sectionName={'section1'} />
-                <NavItem displayed={'#section2' === hash} sectionName={'section2'} />
-                <NavItem displayed={'#section3' === hash} sectionName={'section3'} />
+                <NavItem displayed={props.activeIndex === 0} index={0} onClick={props.onSectionClick}/>
+                <NavItem displayed={props.activeIndex === 1} index={1} onClick={props.onSectionClick}/>
+                <NavItem displayed={props.activeIndex === 2} index={2} onClick={props.onSectionClick}/>
             </ul>
         </nav>);
 }

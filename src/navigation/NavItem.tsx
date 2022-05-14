@@ -8,7 +8,8 @@ import { VariantLabels } from 'framer-motion/types/motion/types';
 
 type NavItemProps = {
     displayed: boolean;
-    sectionName: string;
+    index: number;
+    onClick: (index: number) => void;
 }
 
 export function NavItem(props: NavItemProps) {
@@ -24,5 +25,5 @@ export function NavItem(props: NavItemProps) {
         animate.background = 'rgba(0,0,0,0)';
     }
 
-    return <li><motion.a animate={animate} transition={{ type: "spring", duration: 0.6 }} className={classList} href={'#' +props.sectionName}/></li>
+    return <li><motion.div animate={animate} transition={{ type: "spring", duration: 0.6 }} className={classList} onClick={() => props.onClick(props.index)}/></li>
 }

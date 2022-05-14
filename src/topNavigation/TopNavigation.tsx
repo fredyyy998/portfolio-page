@@ -1,8 +1,8 @@
 import './TopNavigation.scss';
-import { useLocation } from 'react-router';
 
 type TopNavigationProps = {
-  activeIndex: number
+  activeIndex: number,
+  onClick: (index: number) => void;
 }
 
 export default function TopNavigation(props: TopNavigationProps) {
@@ -10,9 +10,9 @@ export default function TopNavigation(props: TopNavigationProps) {
   classNames[props.activeIndex] = ' selected';
   return (
     <div className={'top-navigation'}>
-      <a href={'#section1'} className={classNames[0]}>About</a>
-      <a href={'#section2'} className={classNames[1]}>Portfolio</a>
-      <a href={'#section3'} className={classNames[2]}>Resume</a>
+      <span onClick={() => props.onClick(0)} className={classNames[0]}>About</span>
+      <span onClick={() => props.onClick(1)} className={classNames[1]}>Portfolio</span>
+      <span onClick={() => props.onClick(2)} className={classNames[2]}>Resume</span>
     </div>
   )
 }

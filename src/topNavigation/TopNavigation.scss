@@ -15,14 +15,17 @@
   background-color: colors.$secondary;
   box-shadow: 0 0 2px colors.$primary;
 
-  a:last-child {
+  span:last-child {
     margin: 0 0 0 1.5em;
   }
-  a {
+  span {
     margin: 0 1.5em;
 
     text-decoration: none;
     color: colors.$primary;
+    @include vars.user-select();
+
+    cursor: pointer;
   }
 
   .selected {
