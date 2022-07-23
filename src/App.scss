@@ -8,6 +8,8 @@ html, body {
   padding:0;
 
   color: colors.$primary;
+
+  scroll-snap-type: y mandatory;
 }
 .section-content {
   display: block;
@@ -16,4 +18,8 @@ html, body {
   width:100vw;
   padding: 60px vars.$side-padding;
   box-sizing:border-box;
+}
+
+section {
+  scroll-snap-align: start;
 }
